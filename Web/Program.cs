@@ -1,4 +1,5 @@
 using Infrastructure.Data;
+using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,12 @@ var connection = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<DataContext>(conf => conf.UseNpgsql(connection));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<AuthorService>();
+builder.Services.AddScoped<BookAuthorService>();
+builder.Services.AddScoped<BookEditorService>();
+builder.Services.AddScoped<EditorService>();
+builder.Services.AddScoped<PublisherService>();
+builder.Services.AddScoped<BookService>();
 
 var app = builder.Build();
 

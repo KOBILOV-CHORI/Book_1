@@ -1,9 +1,11 @@
+using System.ComponentModel.DataAnnotations;
 using System.Security.AccessControl;
 
 namespace Domain.Entities;
 
 public class BookAuthor
 {
+    [Key]
     public int AuthorId { get; set; }
     public int BookISBN { get; set; }
     public int AuthorOrder { get; set; }

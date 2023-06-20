@@ -15,7 +15,7 @@ public class DataContext : DbContext
     public DbSet<Author> Authors { get; set; }
     public DbSet<Book> Books { get; set; }
     public DbSet<Editor> Editors { get; set; }
-    public DbSet<BookAuthorBase> BookAuthorBases { get; set; }
-    public DbSet<BookEditorBase> BookEditorBases { get; set; }
+    public DbSet<BookAuthor> BookAuthors { get; set; }
+    public DbSet<BookEditor> BookEditors { get; set; }
     public DbSet<Publisher> Publishers { get; set; }
 }

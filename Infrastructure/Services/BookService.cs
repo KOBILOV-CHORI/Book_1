@@ -16,7 +16,7 @@ public class BookService
     public GetBook AddBook(AddBook book)
     {
         var model = new Book()
-        {
+        {   
             Title = book.Title,
             Type = book.Type,
             PublisherId = book.PublisherId,
@@ -96,7 +96,7 @@ public class BookService
         }
         return new GetBook();
     }
-    public List<GetBook> GetBooks(int id)
+    public List<GetBook> GetBooks()
     {
         var result = _context.Books.Select(e => new GetBook()
         {

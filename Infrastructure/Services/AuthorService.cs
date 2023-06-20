@@ -102,7 +102,7 @@ public class AuthorService
         }
         return new GetAuthor();
     }
-    public List<GetAuthor> GetAuthors(int id)
+    public List<GetAuthor> GetAuthors()
     {
         var result = _context.Authors.Select(e => new GetAuthor()
         {
